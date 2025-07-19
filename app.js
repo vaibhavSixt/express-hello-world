@@ -1,5 +1,4 @@
 const express = require("express");
-import { useEffect } from "react";
 import { renderToString } from 'react-dom/server';
 
 const app = express();
