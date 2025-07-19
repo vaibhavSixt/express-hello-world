@@ -1,5 +1,4 @@
 const express = require("express");
-import { renderToString } from 'react-dom/server';
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -7,7 +6,7 @@ const port = process.env.PORT || 3001;
 
 app.get("/", (_, res) => {
  const App = require('./component/dashboard').default;
-  const html = renderToString(<App />);
+  const html = <App />;
   res.type('html').send(html);
 });
 
