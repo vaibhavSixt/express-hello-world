@@ -1,5 +1,5 @@
 const express = require("express");
-const dashboard=require('./component/dashboard');
+const dashboard=require('../components/dashboard');
 
 const app = express();
 const port = process.env.PORT || 3001;
