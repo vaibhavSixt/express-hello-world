@@ -1,13 +1,12 @@
 const express = require("express");
+const dashboard=require('./component/dashboard');
 
 const app = express();
 const port = process.env.PORT || 3001;
 
 
 app.get("/", (_, res) => {
- const App = require('./component/dashboard').default;
-  const html = <App />;
-  res.type('html').send(html);
+  res.type('html').send(dashboard);
 });
 
 app.get("/addfood", (_, res) => {
